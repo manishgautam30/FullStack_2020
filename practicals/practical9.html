@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 8</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #container {
+            margin-top: 100px;
+            width: 98%;
+            padding: 15px;
+            margin: 0px auto;
+        }
+        
+        @media(min-width: 1151px) {
+            ul {
+                margin: 0px auto;
+                list-style: none;
+                overflow: hidden;
+                background-color: rgb(20, 12, 53);
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            ul li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+            ul li a {
+                text-align: center;
+                width: fit-content;
+                display: block;
+                padding: 10px 15px;
+                color: white;
+                font-size: large;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 40px;
+            }
+            ul li a:hover {
+                background-color: red;
+                color: black;
+            }
+            #header {
+                background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 120px;
+                width: 100%;
+                border-radius: 10px;
+                font-size: x-large;
+                color: transparent;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            #banner {
+                background-image: url('https://cloud.fullstackacademy.com/FSA-blog-header-code-from-home.jpg?mtime=20200330123450');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                height: 650px;
+                width: 100%;
+                justify-content: center;
+                border-radius: 10px;
+                font-size: x-large;
+                font-weight: bold;
+                color: transparent;
+                margin-bottom: 10px;
+            }
+            #content {
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            #mid1 {
+                order: 1;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 15px;
+            }
+            #c1 {
+                order: 1;
+                height: 300px;
+                width: 300px;
+                border: 2px solid red;
+                background-image: url('https://library.kissclipart.com/20181001/faw/kissclipart-transparent-image-of-a-boy-clipart-boy-clip-art-fb030a3a80849eeb.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                margin-right: 20px;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #c2 {
+                order: 2;
+                height: 300px;
+                width: 300px;
+                margin-right: 20px;
+                background-image: url('https://img.pngio.com/-clipart-boy-school-clipart-drawing-for-kids-boy-clipart-boy-clipart-png-820_807.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #c3 {
+                order: 3;
+                height: 300px;
+                width: 300px;
+                margin-right: 20px;
+                background-image: url('https://library.kissclipart.com/20181001/faw/kissclipart-transparent-image-of-a-boy-clipart-boy-clip-art-fb030a3a80849eeb.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #c4 {
+                order: 4;
+                height: 300px;
+                width: 300px;
+                background-image: url('https://img.pngio.com/-clipart-boy-school-clipart-drawing-for-kids-boy-clipart-boy-clipart-png-820_807.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #hed2 {
+                order: 2;
+                margin-bottom: 20px;
+            }
+            #mid2 {
+                order: 3;
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            }
+            #left {
+                order: 1;
+                width: 48%;
+                height: 580px;
+                background-color: aqua;
+                color: black;
+                margin-right: 15px;
+                font-size: x-large;
+                display: flex;
+            }
+            #right {
+                order: 2;
+                width: 50%;
+                height: 580px;
+                display: flex;
+                flex-direction: column;
+            }
+            #article1 {
+                background-image: url('https://media.geeksforgeeks.org/wp-content/cdn-uploads/html-1024x341.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 1;
+                height: 180px;
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: x-large;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #article2 {
+                background-image: url('https://cdn.educba.com/academy/wp-content/uploads/2019/03/Introduction-To-CSS-1.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 2;
+                height: 180px;
+                font-weight: bold;
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: x-large;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #article3 {
+                background-image: url('https://www.tutorialrepublic.com/lib/images/javascript-illustration.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 3;
+                height: 180px;
+                font-weight: bold;
+                width: 100%;
+                font-size: x-large;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #hed3 {
+                order: 4;
+                margin-top: 20px;
+            }
+            #mid3 {
+                margin-top: 20px;
+                order: 5;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 15px;
+            }
+            #sq1 {
+                background-color: red;
+                order: 1;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                float: left;
+                background-color: white;
+            }
+            #sq2 {
+                background-color: red;
+                order: 2;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                float: left;
+                background-color: white;
+            }
+            #sq3 {
+                background-color: red;
+                order: 3;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                float: left;
+                background-color: white;
+            }
+            #sq4 {
+                background-color: red;
+                order: 4;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                float: left;
+                background-color: white;
+            }
+            #footer {
+                background-color: purple;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                width: 100%;
+                border-radius: 10px;
+                font-size: x-large;
+                color: white;
+                margin-top: 20px;
+            }
+            div>a:hover {
+                background-color: blue;
+            }
+            div>p {
+                text-align: justify;
+                margin: 10px 15px 10px;
+            }
+            div>a {
+                background-color: red;
+                text-decoration: none;
+                color: white;
+                display: block;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 7px;
+            }
+            div>h4 {
+                text-align: center;
+                margin: 10px;
+                font-size: x-large;
+            }
+            div>h1 {
+                text-transform: uppercase;
+                text-align: center;
+                color: black;
+            }
+            div>img {
+                width: 90%;
+                height: 45%;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-top: 10px;
+            }
+            #lala:hover {
+                background-color: red;
+            }
+            #lala {
+                background-color: whitesmoke;
+                text-decoration: none;
+                color: black;
+                display: block;
+                text-align: center;
+                padding: 5px;
+                margin: 10px;
+                border-radius: 2px;
+            }
+        }
+        
+        @media(min-width: 800px) and (max-width: 1150px) {
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            ul {
+                margin: 0px auto;
+                list-style: none;
+                overflow: hidden;
+                background-color: rgb(20, 12, 53);
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            ul li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+            ul li a {
+                text-align: center;
+                width: fit-content;
+                display: block;
+                padding: 10px 15px;
+                color: white;
+                font-size: large;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 40px;
+            }
+            ul li a:hover {
+                background-color: red;
+                color: black;
+            }
+            #container {
+                margin-top: 100px;
+                width: 98%;
+                padding: 15px;
+                margin: 0px auto;
+            }
+            #header {
+                background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 120px;
+                width: 100%;
+                border-radius: 10px;
+                font-size: x-large;
+                color: transparent;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            #banner {
+                background-image: url('https://cloud.fullstackacademy.com/FSA-blog-header-code-from-home.jpg?mtime=20200330123450');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                height: 650px;
+                width: 100%;
+                justify-content: center;
+                border-radius: 10px;
+                font-size: x-large;
+                font-weight: bold;
+                color: transparent;
+                margin-bottom: 10px;
+            }
+            #content {
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            #mid1 {
+                order: 1;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 15px;
+            }
+            #c1 {
+                order: 1;
+                height: 300px;
+                width: 300px;
+                border: 2px solid red;
+                background-image: url('https://library.kissclipart.com/20181001/faw/kissclipart-transparent-image-of-a-boy-clipart-boy-clip-art-fb030a3a80849eeb.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                margin-right: 20px;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #c2 {
+                order: 2;
+                height: 300px;
+                width: 300px;
+                margin-right: 20px;
+                background-image: url('https://img.pngio.com/-clipart-boy-school-clipart-drawing-for-kids-boy-clipart-boy-clipart-png-820_807.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #c3 {
+                order: 3;
+                height: 300px;
+                width: 300px;
+                margin-right: 20px;
+                background-image: url('https://library.kissclipart.com/20181001/faw/kissclipart-transparent-image-of-a-boy-clipart-boy-clip-art-fb030a3a80849eeb.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #c4 {
+                order: 4;
+                height: 300px;
+                width: 300px;
+                background-image: url('https://img.pngio.com/-clipart-boy-school-clipart-drawing-for-kids-boy-clipart-boy-clipart-png-820_807.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #hed2 {
+                order: 2;
+                margin-bottom: 20px;
+            }
+            #mid2 {
+                order: 3;
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            }
+            #left {
+                order: 1;
+                width: 48%;
+                height: 580px;
+                background-color: aqua;
+                color: black;
+                margin-right: 15px;
+                font-size: x-large;
+                display: flex;
+            }
+            #right {
+                order: 2;
+                width: 50%;
+                height: 580px;
+                display: flex;
+                flex-direction: column;
+            }
+            #article1 {
+                background-image: url('https://media.geeksforgeeks.org/wp-content/cdn-uploads/html-1024x341.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 1;
+                height: 180px;
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: x-large;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #article2 {
+                background-image: url('https://cdn.educba.com/academy/wp-content/uploads/2019/03/Introduction-To-CSS-1.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 2;
+                height: 180px;
+                font-weight: bold;
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: x-large;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #article3 {
+                background-image: url('https://www.tutorialrepublic.com/lib/images/javascript-illustration.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 3;
+                height: 180px;
+                font-weight: bold;
+                width: 100%;
+                font-size: x-large;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #hed3 {
+                order: 4;
+                margin-top: 20px;
+            }
+            #mid3 {
+                margin-top: 20px;
+                order: 5;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 15px;
+            }
+            #sq1 {
+                background-color: red;
+                order: 1;
+                height: 800px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #sq2 {
+                background-color: red;
+                order: 2;
+                height: 800px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #sq3 {
+                background-color: red;
+                order: 3;
+                height: 800px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #sq4 {
+                background-color: red;
+                order: 4;
+                height: 800px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #footer {
+                background-color: purple;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                width: 100%;
+                border-radius: 10px;
+                font-size: x-large;
+                color: white;
+                margin-top: 20px;
+            }
+            div>a:hover {
+                background-color: blue;
+            }
+            div>p {
+                text-align: justify;
+                margin: 10px 15px 10px;
+            }
+            div>a {
+                background-color: red;
+                text-decoration: none;
+                color: white;
+                display: block;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 7px;
+            }
+            div>h4 {
+                text-align: center;
+                margin: 10px;
+                font-size: x-large;
+            }
+            div>h1 {
+                text-transform: uppercase;
+                text-align: center;
+                color: black;
+            }
+            div>img {
+                width: 90%;
+                height: 45%;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-top: 10px;
+            }
+            #lala:hover {
+                background-color: red;
+            }
+            #lala {
+                background-color: whitesmoke;
+                text-decoration: none;
+                color: black;
+                display: block;
+                text-align: center;
+                padding: 5px;
+                margin: 10px;
+                border-radius: 2px;
+            }
+        }
+        
+        @media(max-width: 799px) {
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            ul {
+                /* margin: 0px auto; */
+                list-style: none;
+                overflow: hidden;
+                background-color: blue;
+                width: fit-content;
+            }
+            /*         
+        ul li {
+            display: inline-block;
+        } */
+            ul li a {
+                text-align: center;
+                width: 100px;
+                display: block;
+                padding: 10px 15px;
+                color: white;
+                font-size: large;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            ul li a:hover {
+                background-color: red;
+            }
+            .content {
+                padding: 20px;
+                text-align: justify;
+            }
+            #container {
+                margin-top: 100px;
+                width: 98%;
+                padding: 15px;
+                margin: 0px auto;
+            }
+            #header {
+                background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 120px;
+                width: 100%;
+                border-radius: 10px;
+                font-size: x-large;
+                color: transparent;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            #banner {
+                background-image: url('https://cloud.fullstackacademy.com/FSA-blog-header-code-from-home.jpg?mtime=20200330123450');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                height: 650px;
+                width: 100%;
+                justify-content: center;
+                border-radius: 10px;
+                font-size: x-large;
+                font-weight: bold;
+                color: transparent;
+                margin-bottom: 10px;
+            }
+            #content {
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            #mid1 {
+                order: 1;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            #c1 {
+                order: 1;
+                height: 300px;
+                width: 300px;
+                border: 2px solid red;
+                background-image: url('https://library.kissclipart.com/20181001/faw/kissclipart-transparent-image-of-a-boy-clipart-boy-clip-art-fb030a3a80849eeb.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                margin-right: 20px;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #c2 {
+                order: 2;
+                height: 300px;
+                width: 300px;
+                margin-right: 20px;
+                background-image: url('https://img.pngio.com/-clipart-boy-school-clipart-drawing-for-kids-boy-clipart-boy-clipart-png-820_807.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #c3 {
+                order: 3;
+                height: 300px;
+                width: 300px;
+                margin-right: 20px;
+                background-image: url('https://library.kissclipart.com/20181001/faw/kissclipart-transparent-image-of-a-boy-clipart-boy-clip-art-fb030a3a80849eeb.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #c4 {
+                order: 4;
+                height: 300px;
+                width: 300px;
+                background-image: url('https://img.pngio.com/-clipart-boy-school-clipart-drawing-for-kids-boy-clipart-boy-clipart-png-820_807.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 50%;
+                font-size: x-large;
+                color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid red;
+            }
+            #hed2 {
+                order: 2;
+                margin-bottom: 20px;
+            }
+            #mid2 {
+                order: 3;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            }
+            #left {
+                order: 1;
+                width: 100%;
+                height: 500px;
+                background-color: aqua;
+                color: black;
+                margin-right: 15px;
+                font-size: x-large;
+                display: flex;
+            }
+            #right {
+                order: 2;
+                width: 100%;
+                height: 580px;
+                display: flex;
+                flex-direction: column;
+            }
+            #article1 {
+                background-image: url('https://media.geeksforgeeks.org/wp-content/cdn-uploads/html-1024x341.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 1;
+                height: 180px;
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: x-large;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #article2 {
+                background-image: url('https://cdn.educba.com/academy/wp-content/uploads/2019/03/Introduction-To-CSS-1.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 2;
+                height: 180px;
+                font-weight: bold;
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: x-large;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #article3 {
+                background-image: url('https://www.tutorialrepublic.com/lib/images/javascript-illustration.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: transparent;
+                order: 3;
+                height: 180px;
+                font-weight: bold;
+                width: 100%;
+                font-size: x-large;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #hed3 {
+                order: 4;
+                margin-top: 20px;
+            }
+            #mid3 {
+                margin-top: 20px;
+                order: 5;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            #sq1 {
+                background-color: red;
+                order: 1;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #sq2 {
+                background-color: red;
+                order: 2;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #sq3 {
+                background-color: red;
+                order: 3;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #sq4 {
+                background-color: red;
+                order: 4;
+                height: 500px;
+                width: 350px;
+                margin-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: white;
+            }
+            #footer {
+                background-color: purple;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                width: 100%;
+                border-radius: 10px;
+                font-size: x-large;
+                color: white;
+                margin-top: 20px;
+            }
+            div>a:hover {
+                background-color: blue;
+            }
+            div>p {
+                text-align: justify;
+                margin: 10px 15px 10px;
+            }
+            div>a {
+                background-color: red;
+                text-decoration: none;
+                color: white;
+                display: block;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 7px;
+            }
+            div>h4 {
+                text-align: center;
+                margin: 10px;
+                font-size: x-large;
+            }
+            div>h1 {
+                text-transform: uppercase;
+                text-align: center;
+                color: black;
+            }
+            div>img {
+                width: 90%;
+                height: 45%;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-top: 10px;
+            }
+            #lala:hover {
+                background-color: red;
+            }
+            #lala {
+                background-color: whitesmoke;
+                text-decoration: none;
+                color: black;
+                display: block;
+                text-align: center;
+                padding: 5px;
+                margin: 10px;
+                border-radius: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- shortcut for list links ul>li*4>a -->
+    <ul>
+        <li>
+            <a href="#">home</a></li>
+        <li>
+            <a href="#">about</a></li>
+        <li>
+            <a href="#">contact</a></li>
+        <li>
+            <a href="#">follow</a></li>
+    </ul>
+
+    <!-- the back ground part --------------------------------------------------------------------->
+
+    <div id="container">
+        <div id="header"></div>
+        <div id="banner"></div>
+        <div id="content">
+            <h1 style="text-align: center;">Our Team</h1>
+            <div id="mid1">
+                <div id="c1"></div>
+                <div id="c2"></div>
+                <div id="c3"></div>
+                <div id="c4"></div>
+            </div>
+            <div id="hed2">
+                <h1 style="text-align: center;">About Us</h1>
+            </div>
+            <div id="mid2">
+                <div id="left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam nobis incidunt neque minima, sint voluptates perspiciatis amet aliquam consequatur inventore quos cumque explicabo animi consectetur accusamus, deserunt enim eos illo obcaecati,
+                    id error. Nesciunt omnis cupiditate expedita dolorem id nulla totam quidem harum minus eveniet animi ratione, asperiores maiores earum, iure, explicabo numquam. Dignissimos quos, numquam facere deserunt dolore atque vitae voluptatem
+                    impedit perspiciatis adipisci officiis molestiae doloribus iure ut similique quidem aliquid cum necessitatibus laboriosam neque ea. Earum, unde aliquam veritatis ea voluptatibus assumenda doloremque suscipit, totam nobis eum odio libero
+                    recusandae incidunt iste saepe ratione possimus est officia!</div>
+                <div id="right">
+                    <div id="article1"></div>
+                    <div id="article2"></div>
+                    <div id="article3"></div>
+                </div>
+            </div>
+            <div id="hed3">
+                <h1 style="text-align: center;">Technology Used</h1>
+            </div>
+            <div id="mid3">
+
+                <div id="sq1">
+                    <img src="../images/html.jpg" alt="image">
+
+                    <h4>Introduction to HTML</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque possimus corporis quia ipsum pariatur reprehenderit hic ab esse. Nemo tenetur eos fuga consectetur sint, reiciendis mollitia excepturi laborum voluptatum expedita odio pariatur alias,
+                        esse quibusdam ex quam explicabo fugiat!
+                    </p>
+
+                    <a target="_blank" href="../practicals/practical5_files/HTML.html">
+                                READ MORE
+                            </a>
+                </div>
+
+
+                <div id="sq2">
+                    <img src="../images/css.jpg" alt="image">
+                    <h4>Introduction to CSS</h4>
+
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus enim commodi fugit officia dolore quibusdam, voluptas aut cupiditate sit reprehenderit nemo sed reiciendis repudiandae, ex doloribus sapiente vero! Odit maxime voluptas accusamus! Ratione
+                        ipsa sunt dignissimos animi error. Dolores, eos!
+                    </p>
+                    <a target="_blank" href="../practicals/practical5_files/CSS.html">
+                READ MORE
+            </a>
+
+                </div>
+
+
+                <div id="sq3">
+                    <img src="../images/js.jpg" alt="image">
+                    <h4>Introduction to JavaScript</h4>
+
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur esse, mollitia explicabo ullam numquam quam vitae quo dolorem cupiditate labore pariatur accusamus commodi exercitationem iure id sequi vero, dolor suscipit nam quibusdam consequatur
+                        aliquam corporis! Reprehen!
+                    </p>
+                    <a target="_blank" href="../practicals/practical5_files/js.html">
+                                READ MORE
+                            </a>
+
+                </div>
+
+
+                <div id="sq4">
+                    <img id="image" src="../images/bs.jpg" alt="image">
+
+                    <h4>Introduction to Bootstrap</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque possimus corporis quia ipsum pariatur reprehenderit hic ab esse. Nemo tenetur eos fuga consectetur sint, reiciendis mollitia excepturi laborum voluptatum expedita odio pariatur alias,
+                        esse quibusdam ex quam explicabo fugiat!
+                    </p>
+
+                    <a target="_blank" href="../practicals/practical5_files/bs.html">
+                                READ MORE
+                            </a>
+
+                </div>
+            </div>
+        </div>
+
+        <h1 style="text-align: center;margin-top: 30px;">Contact</h1>
+        <div id="footer">
+            <a id="lala" href="mailto:manish.gautam_cs18@gla.ac.in">Email me for more suggestion</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
