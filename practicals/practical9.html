@@ -29,6 +29,7 @@
                 width: 100%;
                 justify-content: center;
                 align-items: center;
+                position: fixed;
             }
             ul li {
                 display: inline-block;
@@ -51,6 +52,7 @@
                 color: black;
             }
             #header {
+                margin-top: 70px;
                 background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -348,11 +350,8 @@
         }
         
         @media(min-width: 800px) and (max-width: 1150px) {
-            * {
-                margin: 0px;
-                padding: 0px;
-            }
             ul {
+                position: fixed;
                 margin: 0px auto;
                 list-style: none;
                 overflow: hidden;
@@ -382,13 +381,8 @@
                 background-color: red;
                 color: black;
             }
-            #container {
-                margin-top: 100px;
-                width: 98%;
-                padding: 15px;
-                margin: 0px auto;
-            }
             #header {
+                margin-top: 70px;
                 background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -443,7 +437,10 @@
                 margin-right: 20px;
                 font-size: x-large;
                 color: transparent;
-                display: flex;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 align-items: center;
                 justify-content: center;
             }
@@ -458,7 +455,10 @@
                 border-radius: 50%;
                 font-size: x-large;
                 color: transparent;
-                display: flex;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 align-items: center;
                 justify-content: center;
                 border: 2px solid red;
@@ -474,7 +474,10 @@
                 border-radius: 50%;
                 font-size: x-large;
                 color: transparent;
-                display: flex;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 align-items: center;
                 justify-content: center;
                 border: 2px solid red;
@@ -489,7 +492,10 @@
                 border-radius: 50%;
                 font-size: x-large;
                 color: transparent;
-                display: flex;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 align-items: center;
                 justify-content: center;
                 border: 2px solid red;
@@ -589,6 +595,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #sq2 {
                 background-color: red;
@@ -599,6 +609,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #sq3 {
                 background-color: red;
@@ -609,6 +623,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #sq4 {
                 background-color: red;
@@ -619,6 +637,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #footer {
                 background-color: purple;
@@ -682,21 +704,17 @@
         }
         
         @media(max-width: 799px) {
-            * {
-                margin: 0px;
-                padding: 0px;
-            }
             ul {
                 /* margin: 0px auto; */
                 list-style: none;
                 overflow: hidden;
-                background-color: blue;
-                width: fit-content;
+                background-color: rgb(14, 14, 27);
+                width: 100%;
+                position: fixed;
             }
-            /*         
-        ul li {
-            display: inline-block;
-        } */
+            ul li {
+                display: inline-block;
+            }
             ul li a {
                 text-align: center;
                 width: 100px;
@@ -715,13 +733,8 @@
                 padding: 20px;
                 text-align: justify;
             }
-            #container {
-                margin-top: 100px;
-                width: 98%;
-                padding: 15px;
-                margin: 0px auto;
-            }
             #header {
+                margin-top: 50px;
                 background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -773,10 +786,12 @@
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 border-radius: 50%;
-                margin-right: 20px;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 font-size: x-large;
                 color: transparent;
-                display: flex;
                 align-items: center;
                 justify-content: center;
             }
@@ -784,12 +799,15 @@
                 order: 2;
                 height: 300px;
                 width: 300px;
-                margin-right: 20px;
                 background-image: url('https://img.pngio.com/-clipart-boy-school-clipart-drawing-for-kids-boy-clipart-boy-clipart-png-820_807.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 border-radius: 50%;
                 font-size: x-large;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 color: transparent;
                 display: flex;
                 align-items: center;
@@ -800,14 +818,16 @@
                 order: 3;
                 height: 300px;
                 width: 300px;
-                margin-right: 20px;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 background-image: url('https://library.kissclipart.com/20181001/faw/kissclipart-transparent-image-of-a-boy-clipart-boy-clip-art-fb030a3a80849eeb.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 border-radius: 50%;
                 font-size: x-large;
                 color: transparent;
-                display: flex;
                 align-items: center;
                 justify-content: center;
                 border: 2px solid red;
@@ -821,8 +841,11 @@
                 background-size: 100% 100%;
                 border-radius: 50%;
                 font-size: x-large;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
                 color: transparent;
-                display: flex;
                 align-items: center;
                 justify-content: center;
                 border: 2px solid red;
@@ -845,9 +868,9 @@
                 height: 500px;
                 background-color: aqua;
                 color: black;
-                margin-right: 15px;
                 font-size: x-large;
                 display: flex;
+                margin-bottom: 20px;
             }
             #right {
                 order: 2;
@@ -922,6 +945,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #sq2 {
                 background-color: red;
@@ -932,6 +959,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #sq3 {
                 background-color: red;
@@ -942,6 +973,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #sq4 {
                 background-color: red;
@@ -952,6 +987,10 @@
                 max-width: fit-content;
                 max-height: fit-content;
                 background-color: white;
+                margin-right: auto;
+                display: block;
+                float: none;
+                margin-left: auto;
             }
             #footer {
                 background-color: purple;
