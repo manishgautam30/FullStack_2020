@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical 8</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         * {
@@ -14,45 +15,100 @@
         
         #container {
             margin-top: 100px;
-            width: 98%;
-            padding: 15px;
+            width: 100%;
             margin: 0px auto;
         }
         
+        .header {
+            background-color: rgb(16, 19, 44);
+            width: 100%;
+            height: 70px;
+            margin: 0px auto;
+        }
+        
+        .header h2 {
+            float: left;
+            line-height: 70px;
+            text-transform: capitalize;
+            color: white;
+        }
+        
+        .header .menu {
+            list-style: none;
+            float: right;
+        }
+        
+        .menu li {
+            display: inline-block;
+            line-height: 70px;
+            font-size: larger;
+            text-transform: uppercase;
+            padding: 0 20px;
+            transition: 0.4s;
+        }
+        
+        .menu li:hover {
+            background-color: whitesmoke;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+            font-size: larger;
+            transition: 0.4s;
+        }
+        
+        .show-btn:hover,
+        .hide-btn:hover,
+        .menu li a:hover {
+            color: red;
+        }
+        
+        .show-btn,
+        .hide-btn {
+            font-size: 30px;
+            color: white;
+            line-height: 70px;
+            transition: 0.4s;
+            display: none;
+        }
+        
+        .show-btn {
+            float: right;
+        }
+        
+        #chk {
+            visibility: hidden;
+            z-index: -10;
+            position: fixed;
+        }
+        
+        div>h1 {
+            color: red;
+            margin: 20px;
+            background-color: rosybrown;
+            text-align: center;
+        }
+        
+        img {
+            display: block;
+            margin: auto;
+            width: 80%;
+        }
+        
+        #para {
+            color: black;
+            background-color: lightgreen;
+            margin: 20px;
+        }
+        
+        #head {
+            margin-top: 20px;
+        }
+        
         @media(min-width: 1151px) {
-            ul {
-                margin: 0px auto;
-                list-style: none;
-                overflow: hidden;
-                background-color: rgb(20, 12, 53);
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-                position: fixed;
-            }
-            ul li {
-                display: inline-block;
-                margin-right: 20px;
-            }
-            ul li a {
-                text-align: center;
-                width: fit-content;
-                display: block;
-                padding: 10px 15px;
-                color: white;
-                font-size: large;
-                font-weight: bold;
-                text-transform: uppercase;
-                text-decoration: none;
-                font-size: 40px;
-            }
-            ul li a:hover {
-                background-color: red;
-                color: black;
-            }
-            #header {
-                margin-top: 70px;
+            #head {
                 background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -350,39 +406,7 @@
         }
         
         @media(min-width: 800px) and (max-width: 1150px) {
-            ul {
-                position: fixed;
-                margin: 0px auto;
-                list-style: none;
-                overflow: hidden;
-                background-color: rgb(20, 12, 53);
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-            }
-            ul li {
-                display: inline-block;
-                margin-right: 20px;
-            }
-            ul li a {
-                text-align: center;
-                width: fit-content;
-                display: block;
-                padding: 10px 15px;
-                color: white;
-                font-size: large;
-                font-weight: bold;
-                text-transform: uppercase;
-                text-decoration: none;
-                font-size: 40px;
-            }
-            ul li a:hover {
-                background-color: red;
-                color: black;
-            }
-            #header {
-                margin-top: 70px;
+            #head {
                 background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -704,37 +728,38 @@
         }
         
         @media(max-width: 799px) {
-            ul {
-                /* margin: 0px auto; */
-                list-style: none;
-                overflow: hidden;
-                background-color: rgb(14, 14, 27);
-                width: 100%;
-                position: fixed;
-            }
-            ul li {
-                display: inline-block;
-            }
-            ul li a {
-                text-align: center;
-                width: 100px;
+            .show-btn,
+            .hide-btn {
                 display: block;
-                padding: 10px 15px;
-                color: white;
-                font-size: large;
-                font-weight: bold;
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                height: 100vh;
+                background-color: rosybrown;
+                padding: 80px 0px;
+                text-align: center;
+                transition: .7s;
+                line-height: normal;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .menu li {
+                display: block;
+                line-height: 70px;
+                font-size: larger;
                 text-transform: uppercase;
-                text-decoration: none;
+                padding: 0 20px;
             }
-            ul li a:hover {
-                background-color: red;
+            .hide-btn {
+                position: absolute;
+                right: 3%;
+                top: 0px;
             }
-            .content {
-                padding: 20px;
-                text-align: justify;
-            }
-            #header {
-                margin-top: 50px;
+            #head {
                 background-image: url('https://raw.githubusercontent.com/manishgautam30/FullStack_2020/master/images/header.JPG');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -1056,22 +1081,35 @@
 </head>
 
 <body>
+
+
     <!-- shortcut for list links ul>li*4>a -->
-    <ul>
-        <li>
-            <a href="#">home</a></li>
-        <li>
-            <a href="#">about</a></li>
-        <li>
-            <a href="#">contact</a></li>
-        <li>
-            <a href="#">follow</a></li>
-    </ul>
+    <div class="header">
+        <h2>Manish Gautam</h2>
+
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars" ></i>
+            </label>
+
+        <ul class="menu">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">follow</a></li>
+            <li><a href="#">services</a></li>
+            <label for="chk" class="hide-btn">
+                <i class="fa fa-times" ></i>
+            </label>
+
+
+        </ul>
+    </div>
 
     <!-- the back ground part --------------------------------------------------------------------->
 
     <div id="container">
-        <div id="header"></div>
+        <div id="head"></div>
         <div id="banner"></div>
         <div id="content">
             <h1 style="text-align: center;">Our Team</h1>
