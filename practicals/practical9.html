@@ -13,6 +13,19 @@
             padding: 0px;
         }
         
+        a i {
+            margin-right: 8px;
+            color: white;
+        }
+        
+        #happy {
+            background-color: none;
+        }
+        
+        #happy:hover {
+            background-color: none;
+        }
+        
         #container {
             margin-top: 100px;
             width: 100%;
@@ -20,6 +33,7 @@
         }
         
         .header {
+            position: fixed;
             background-color: rgb(16, 19, 44);
             width: 100%;
             height: 70px;
@@ -1093,11 +1107,16 @@
             </label>
 
         <ul class="menu">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">follow</a></li>
-            <li><a href="#">services</a></li>
+            <li>
+                <a href="#home"> <i class="fa fa-users"></i>Team</a>
+            </li>
+            <li>
+                <a href="#about"> <i class="fa fa-question-circle"></i>About us</a>
+            </li>
+            <li><a href="#tech"><i class="fa fa-wrench" ></i>Tech Used</a></li>
+            <li><a href="#contact"><i class="fa fa-handshake-o" ></i>Contact</a></li>
+
+
             <label for="chk" class="hide-btn">
                 <i class="fa fa-times" ></i>
             </label>
@@ -1109,6 +1128,7 @@
     <!-- the back ground part --------------------------------------------------------------------->
 
     <div id="container">
+        <a id="happy" name="home"></a>
         <div id="head"></div>
         <div id="banner"></div>
         <div id="content">
@@ -1120,6 +1140,9 @@
                 <div id="c4"></div>
             </div>
             <div id="hed2">
+
+                <a id="happy" name="about"></a>
+
                 <h1 style="text-align: center;">About Us</h1>
             </div>
             <div id="mid2">
@@ -1134,6 +1157,9 @@
                 </div>
             </div>
             <div id="hed3">
+
+                <a id="happy" name="tech"></a>
+
                 <h1 style="text-align: center;">Technology Used</h1>
             </div>
             <div id="mid3">
@@ -1199,6 +1225,8 @@
                 </div>
             </div>
         </div>
+
+        <a id="happy" name="contact"></a>
 
         <h1 style="text-align: center;margin-top: 30px;">Contact</h1>
         <div id="footer">
