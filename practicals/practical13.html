@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 13</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        .main-content {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: black;
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background-color: black;
+            width: 100%;
+        }
+        
+        .sec-1 {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            clear: both;
+        }
+        
+        .about {
+            width: 40%;
+        }
+        
+        .about h2 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            color: rgb(121, 121, 121);
+        }
+        
+        .link1 {
+            width: 15%;
+            padding: 10px;
+            margin-left: 40px;
+        }
+        
+        .link2 {
+            width: 15%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        
+        .link3 {
+            width: 15%;
+            padding: 10px;
+        }
+        
+        .link1 h2 {
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .link1 ul {
+            list-style: none;
+        }
+        
+        .link1 ul li a {
+            color: rgb(121, 121, 121);
+            text-decoration: none;
+        }
+        
+        .link1 ul li a:hover {
+            color: orange;
+        }
+        
+        .link2 h2 {
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .link2 ul {
+            list-style: none;
+        }
+        
+        .link2 ul li a {
+            color: rgb(121, 121, 121);
+            text-decoration: none;
+        }
+        
+        .link2 ul li a:hover {
+            color: orange;
+        }
+        
+        .link3 h2 {
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .link3 ul {
+            list-style: none;
+        }
+        
+        .link3 ul li {
+            color: rgb(121, 121, 121);
+            text-decoration: none;
+        }
+        
+        .link3 ul li a {
+            color: rgb(121, 121, 121);
+            text-decoration: none;
+        }
+        
+        .link3 ul li a:hover {
+            color: orange;
+        }
+        
+        .sec-2 {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sec-2 h2 {
+            color: white;
+        }
+        
+        .sec-2 a {
+            background-color: red;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        .sec-2 a:hover {
+            background-color: orange;
+            color: black;
+        }
+        
+        .sec-3 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .sec-3 li {
+            float: left;
+            list-style: none;
+            margin: 20px;
+        }
+        
+        .sec-3 a {
+            color: blue;
+            text-decoration: none;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            height: 40px;
+            font-size: 24px;
+            width: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sec-3 a:hover {
+            color: black;
+            background-color: orange;
+        }
+        
+        .sec-4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sec-4 h2 {
+            margin: 30px;
+            color: white;
+            font-size: 15px;
+        }
+        
+        .sec-4 a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .sec-4 a:hover {
+            color: orange;
+        }
+        
+        @media(max-width: 1024px) {
+            .sec-1 {
+                flex-wrap: wrap;
+            }
+            .about {
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-bottom: 20px;
+            }
+            .link1,
+            .link2,
+            .link3 {
+                width: 20%;
+                padding: 20px;
+                margin: 40px;
+            }
+        }
+        
+        @media(max-width: 768px) {
+            .sec-1 {
+                flex-direction: column;
+            }
+            .about {
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-bottom: 20px;
+            }
+            .link1,
+            .link2,
+            .link3 {
+                width: 20%;
+                padding: 20px;
+                margin: 40px auto;
+                margin-left: 40px;
+            }
+            .sec-2 h2 {
+                font-size: 20px;
+            }
+            .sec-3 li {
+                margin: 8px;
+            }
+            .sec-4 h2 {
+                margin: 22px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main-content">
+        Content Area
+    </section>
+    <footer>
+        <section class="sec-1">
+
+            <section class="about">
+                <h2>
+                    About Us
+                </h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex doloremque nobis maxime, iusto sint ratione officiis voluptates exercitationem rerum aspernatur, deserunt, repellat ab iste velit ipsam at. Maxime, ea laboriosam? Illum velit
+                    unde dolorem consectetur asperiores aliquid reprehenderit mollitia veritatis cumque. Quae ea consectetur consequatur tenetur obcaecati accusamus dolor. Eaque quae, dolor nobis assumenda odit animi non saepe excepturi quis in autem
+                    numquam at natus doloremque recusandae, eveniet sunt sed expedita soluta. Provident ducimus tempora iure! Voluptas natus rerum veniam ipsum, nam voluptatibus, officiis at dolores id accusantium neque voluptatem odit provident beatae
+                    aliquid accusamus. Impedit quam autem ex officiis. </p>
+            </section>
+            <section class="link1">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">Designing</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Technologies</a></li>
+                </ul>
+            </section>
+
+            <section class="link2">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Site-map</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </section>
+
+            <section class="link3">
+                <h2>Contact us</h2>
+                <ul>
+                    <li>GLA University,Mathura </li>
+                    <li><a href="tel:+918979440857">+918979440857</a></li>
+                    <li><a href="mailto:manish.gautam_cs18@gla.ac.in">manish.gautam_cs18@gla.ac.in</a></li>
+                    <li><a href="#">Manish Gautam</a></li>
+                </ul>
+            </section>
+
+        </section>
+        <hr width="100%">
+
+        <section class="sec-2">
+            <h2>Register for Free <a href="#">Sign Up </a></h2>
+        </section>
+        <hr width="100%">
+        <section class="sec-3">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </section>
+        <hr width="100%">
+        <section class="sec-4">
+            <h2>Copyright © 2020 All Rights Reserved by <a href="#">Manish Gautam</a></h2>
+        </section>
+
+
+    </footer>
+</body>
+
+</html>
