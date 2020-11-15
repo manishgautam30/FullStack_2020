@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 100vh;
+    background-image: url("../background_wallclock/morning.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#time {
+    font-size: 8rem;
+    /*  iska matlab ye hota hai 8*16px  */
+}
+
+h1 {
+    margin: 1rem;
+    color: white;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 48px;
+    opacity: 1;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .8);
+    mix-blend-mode: multiply;
+}
+
+h3 {
+    font-size: 48px;
+    margin: 1rem;
+    color: white;
+    padding: 10px;
+}
